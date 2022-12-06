@@ -8,7 +8,7 @@ function game() {
     let lost = 0;
     let draw = 0;
     for (let i = 0; i < 5; i++) {
-        playerSelection = window.prompt("To play this game you have to select a choice: rock, paper or scissors?", "");
+          playerSelection = window.prompt("To play this game you have to select a choice: rock, paper or scissors?", "")?.trim().toLowerCase();
         let string = playRound(playerSelection, computerSelection);
         if (string.match(/Win/g) == "Win") {
             alert(string);
